@@ -1,0 +1,15 @@
+<launch>
+
+    <node pkg="ar_demo" type="ar_demo_node" name="ar_demo_node" output="screen">
+        <remap from="~image_raw" to="/cam0/image_raw"/>
+        <remap from="~camera_pose" to="/vins_estimator/camera_pose"/>
+        <remap from="~pointcloud" to="/vins_estimator/point_cloud2"/>
+        <param name="calib_file" type="string" value="$(find ar_demo)/config/euroc_ar.yaml"/>        
+    </node>
+
+    <arg name="rviz" default="false"/>
+    <group if="$(arg rviz)">
+        <node name="rvizvisualisation" pkg="rviz" type="rviz" output="log" args="-d $(find ar_demo)/launch/ar_demo.rviz" />
+    </group>
+
+</launch>

@@ -1,0 +1,22 @@
+%YAML:1.0
+
+# camera instrinsic
+model_type: "pinhole"
+camera_name: camera
+image_width: 640
+image_height: 480
+projection_parameters:
+   fx: 476.1621
+   fy: 475.7076
+   cx: 322.4253
+   cy: 240.1418
+distortion_parameters:
+   k1: 0.0209
+   k2: 0.0817
+   p1: 7.1455e-05
+   p2: -3.78e-04
+
+
+
+
+
