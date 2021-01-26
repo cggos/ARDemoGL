@@ -17,3 +17,7 @@
   ```sh
   roslaunch ar_demo xxx.launch
   ```
+
+<p align="center">
+  <img src="imgs/ARDemoViewer.png" style="width:80%;"/>
+</p>
